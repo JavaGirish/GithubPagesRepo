@@ -15,7 +15,7 @@ private static ExtentReports extent;
     public static void initReports() {
         if(Objects.isNull(extent)) {
             extent = new ExtentReports();
-            ExtentSparkReporter spark = new ExtentSparkReporter("index.html");
+            ExtentSparkReporter spark = new ExtentSparkReporter("./reports/index.html");
             extent.attachReporter(spark);
             spark.config().setTheme(Theme.DARK);
             spark.config().setDocumentTitle("Automation Run Report");
